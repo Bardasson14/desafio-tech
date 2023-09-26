@@ -48,7 +48,7 @@ gem 'rubocop-rails', require: false
 gem 'active_model_serializers', '~> 0.10.0'
 
 # Use WillPaginate to custom paginate
-gem "will_paginate"
+gem 'will_paginate'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
