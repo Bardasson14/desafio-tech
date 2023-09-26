@@ -1,0 +1,1375 @@
+{
+	"info": {
+		"_postman_id": "685e7911-4153-4bd9-ae73-94626fa7c5dd",
+		"name": "Desafio Técnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11324691"
+	},
+	"item": [
+		{
+			"name": "Comentários",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/comments",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/comments/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": {\n        \"name\": \"commentator1\",\n        \"content\": \"Test Comment\",\n        \"post_id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/comments",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\": {\n        \"name\": \"commentator1\",\n        \"content\": \"Test Comment\",\n        \"post_id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a347af4d12efb2c1de74e6340790f349\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8f56ae03-7a10-4e6f-94f4-989086c55bea"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.028042"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.15, sql.active_record;dur=16.86, instantiation.active_record;dur=0.08, render.active_model_serializers;dur=0.42, process_action.action_controller;dur=25.81"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"commentator1\",\n    \"content\": \"Test Comment\",\n    \"post_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": {\n        \"name\": \"commentator1\",\n        \"content\": \"Test Comment\",\n        \"post_id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/comments/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\": {\n        \"name\": \"commentator1\",\n        \"content\": \"Test Comment\",\n        \"post_id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments/3",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b85e6a611ba9a5929b38a42cf2a281db\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a064cc90-6a63-4925-81f2-f09652a46a86"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.020542"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.12, sql.active_record;dur=14.93, instantiation.active_record;dur=1.07, render.active_model_serializers;dur=0.08, process_action.action_controller;dur=18.81"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Exclusão bem-sucedida\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/posts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/posts/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post\": {\n        \"title\": \"Post Test\",\n        \"content\": \"Teste 12345678\",\n        \"user_id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/posts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post\": {\n        \"title\": \"Post Test\",\n        \"content\": \"Teste 12345678\",\n        \"user_id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/posts",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f16f2879f33a3b27b9f1b113c9c309f5\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "6c52ecb6-6506-4735-891d-c2401653b205"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.045960"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.18, sql.active_record;dur=11.36, instantiation.active_record;dur=0.12, render.active_model_serializers;dur=0.36, process_action.action_controller;dur=43.19"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Post Test\",\n    \"content\": \"Teste 12345678\",\n    \"user_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post\": {\n        \"title\": \"Post Test\",\n        \"content\": \"Teste 12345678\",\n        \"user_id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/posts/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post\": {\n        \"title\": \"Post Test\",\n        \"content\": \"Teste 12345678\",\n        \"user_id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/posts/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b85e6a611ba9a5929b38a42cf2a281db\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "4b8588a6-1a4d-4749-b872-c7546fdfcae5"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.245639"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.12, sql.active_record;dur=21.57, instantiation.active_record;dur=7.67, render.active_model_serializers;dur=0.17, process_action.action_controller;dur=199.58"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Exclusão bem-sucedida\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c7fb96e630485d76e40169806b50f6b\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a025b412-32d4-48fb-bbc5-90c44e3677d8"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.008318"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.18, sql.active_record;dur=2.04, instantiation.active_record;dur=0.14, render.active_model_serializers;dur=0.62, process_action.action_controller;dur=4.87"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c7fb96e630485d76e40169806b50f6b\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a025b412-32d4-48fb-bbc5-90c44e3677d8"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.008318"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.18, sql.active_record;dur=2.04, instantiation.active_record;dur=0.14, render.active_model_serializers;dur=0.62, process_action.action_controller;dur=4.87"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test1@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "500 - Confirmação de Senha",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"wrong\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "f3f7c9b8-f6a2-44f1-a05b-cddc6ff3c91d"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.242013"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.13, sql.active_record;dur=7.65, render.active_model_serializers;dur=0.11, process_action.action_controller;dur=189.21"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Erro(s) ao cadastrar Usuário: Confirmação de Senha não é igual a Senha\"\n}"
+						},
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2377b8437b962de02c8078e93b91e47\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "5b3ae694-7372-48ec-87d4-b7c10645fe3b"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.264149"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.13, sql.active_record;dur=37.54, render.active_model_serializers;dur=0.32, process_action.action_controller;dur=223.27"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"New User\",\n    \"email\": \"test@user.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "500 - Confirmação de Senha",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"wrong\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "f3f7c9b8-f6a2-44f1-a05b-cddc6ff3c91d"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.242013"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.13, sql.active_record;dur=7.65, render.active_model_serializers;dur=0.11, process_action.action_controller;dur=189.21"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Erro(s) ao cadastrar Usuário: Confirmação de Senha não é igual a Senha\"\n}"
+						},
+						{
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2377b8437b962de02c8078e93b91e47\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "5b3ae694-7372-48ec-87d4-b7c10645fe3b"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.264149"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.13, sql.active_record;dur=37.54, render.active_model_serializers;dur=0.32, process_action.action_controller;dur=223.27"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"New User\",\n    \"email\": \"test@user.com\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var respHeaders = pm.response.headers;",
+							"var authToken = respHeaders.get('Authorization');",
+							"",
+							"if(authToken){",
+							"    console.log(pm.collectionVariables);",
+							"    pm.collectionVariables.set(\"Token\", authToken);",
+							"    tests[\"Must return access_token\"] = authToken !== null;",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"admin@teste.com\",\n        \"password\": \"admin123\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"email\": \"test1@user.com\",\n        \"password\": \"password123\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1YzYwNzc4NS00OWEzLTRmNDktOGIyNC03NDA4NTVmNTZlMTUiLCJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjk1NzI4MzIzLCJleHAiOjE2OTU3MzAxMjN9.m4Iw4NQN3DGVvJXyXja1kr1EUoCUDzi2xsjBanBiFpE"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6aaac438de2764d703635cd51f57131c\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "952ab17f-a2df-4c7c-8f2d-edd7c0d1bc99"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.180908"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=1.33, instantiation.active_record;dur=0.04, render.active_model_serializers;dur=0.23, process_action.action_controller;dur=178.62"
+						},
+						{
+							"key": "vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"New User\",\n    \"email\": \"test1@user.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"test@user.com\",\n        \"password\": \"password123\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/logout",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{Token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": ""
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
