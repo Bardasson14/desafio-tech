@@ -1,6 +1,7 @@
 class CollectionsController < ApplicationController
 
   before_action :fetch_instance, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[show index]
 
   def index
     resources = resource_class.order :id
@@ -35,11 +36,9 @@ class CollectionsController < ApplicationController
 
   def destroy
     if @resource.destroy
-      render json: { message: "Exclusão de #{I18n.t "activerecord.models.#{resource_class.to_s.downcase}.one} bem-sucedida" }"}, status: :ok
+      render json: { message: "Exclusão bem-sucedida" }, status: :ok
     else
-      render json: {
-        message: "Erro ao excluir #{I18n.t "activerecord.models.#{resource_class.to_s.downcase}.one}"}"
-      }, status: :internal_server_error
+      render json: { message: "Erro ao confirmar exclusão" }, status: :internal_server_error
     end
   end
 

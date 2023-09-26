@@ -9,6 +9,11 @@ pt_br:
       user:
         one: Usuário
         other: Usuários
+  devise:
+    failure:
+      user:
+       not_found_in_database: Usuário não encontrado
+       unauthenticated: Necessário realizar autenticação
   errors:
       format: "%{attribute} %{message}"
       messages:
