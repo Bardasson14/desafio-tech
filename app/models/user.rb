@@ -11,4 +11,6 @@ class User < ApplicationRecord
   validates_confirmation_of :password
 
   validates_presence_of :name
+
+  has_many :posts, dependent: :destroy
 end

@@ -1,0 +1,13 @@
+admin:
+  id: 1
+  name: Admin User
+  email: admin@user.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'admin123') %>
+  jti: <%= SecureRandom.uuid %>
+
+regular:
+  id: 2
+  name: Regular User
+  name: regular@user.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'user123') %>
+  jti: <%= SecureRandom.uuid %>

@@ -1,0 +1,5 @@
+default:
+  id: 1
+  title: Post 1
+  content: Conteúdo do Post
+  user_id: 2

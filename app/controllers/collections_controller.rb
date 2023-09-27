@@ -6,6 +6,11 @@ class CollectionsController < ApplicationController
 
   def index
     resources = resource_class.order :id
+
+    if params[:page].present? && params[:per_page].present?
+      resources = resources.paginate(page: params[:page], per_page: params[:per_page])
+    end
+    
     render json: resources, each_serializer: resource_serializer
   end
 
@@ -27,10 +32,10 @@ class CollectionsController < ApplicationController
 
   def update
     if @resource.update allowed_params
-      render json: resource, serializer: resource_serializer
+      render json: @resource, serializer: resource_serializer
     else
       render json: {
-        message: resource.errors.full_messages.uniq.join(', ')
+        message: @resource.errors.full_messages.uniq.join(', ')
       }, status: :internal_server_error
     end
   end
@@ -58,6 +63,6 @@ class CollectionsController < ApplicationController
   end
 
   def allowed_params
-    params.require(controller_name.classify.underscore.to_sym).permit!
+    params.require(controller_name.classify.underscore.to_sym).permit! # allow all params, by default
   end
 end

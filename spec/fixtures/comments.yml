@@ -1,0 +1,5 @@
+default:
+  id: 1
+  name: Usuário Convidado
+  content: Concordo com o Post
+  post_id: 1

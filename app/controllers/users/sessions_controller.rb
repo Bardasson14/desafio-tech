@@ -7,7 +7,6 @@ module Users
     respond_to :json
 
     def respond_with(current_user, _opts = {})
-      p current_user.inspect
       render json: current_user, serializer: UserSerializer
     end
 

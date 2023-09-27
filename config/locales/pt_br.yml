@@ -5,10 +5,22 @@ pt_br:
         name: Nome
         password: Senha
         password_confirmation: Confirmação de Senha
+      comments:
+        name: Nome
+        content: Conteúdo
+      posts:
+        title: Título
+        content: Conteúdo
     models:
       user:
         one: Usuário
         other: Usuários
+      comment:
+        one: Comentário
+        other: Comentários
+      post:
+        one: Post
+        other: Posts
   devise:
     failure:
       user:
