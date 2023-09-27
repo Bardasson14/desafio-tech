@@ -7,5 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Test DB
         run: rails db:create db:migrate RAILS_ENV=test
-      - name: Test
-        run: docker-compose run web rails t
+      - name: Run RSpec
+        run: rspec
