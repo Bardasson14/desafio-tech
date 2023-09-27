@@ -8,6 +8,12 @@ admin:
 regular:
   id: 2
   name: Regular User
-  name: regular@user.com
+  email: regular@user.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'user123') %>
   jti: <%= SecureRandom.uuid %>
+
+regular_with_accent_marks_in_name:
+  id: 3
+  name: João González
+  email: joao_gonzalez@user.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'user123') %>

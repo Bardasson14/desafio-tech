@@ -9,8 +9,6 @@ RSpec.describe CommentsController, type: :request do
 
   context 'unauthenticated' do
     before(:each) do
-      admin_user = users :admin
-      # sign_in admin_user
       @default_comment = comments :default
       @regular_user = users :regular
     end

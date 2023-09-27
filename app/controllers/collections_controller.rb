@@ -5,7 +5,8 @@ class CollectionsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show index]
 
   def index
-    resources = resource_class.order :id
+    selected_params = params.slice(*resource_class.filterable_columns)
+    resources = resource_class.query_by_filters(selected_params)
 
     if params[:page].present? && params[:per_page].present?
       resources = resources.paginate(page: params[:page], per_page: params[:per_page])

@@ -3,3 +3,9 @@ default:
   title: Post 1
   content: Conteúdo do Post
   user_id: 2
+
+alternative:
+  id: 2
+  title: Post 2 (discussão)
+  content: Conteúdo bônus do Post Alternativo
+  user_id: 2

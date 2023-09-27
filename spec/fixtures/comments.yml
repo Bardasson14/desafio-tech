@@ -3,3 +3,9 @@ default:
   name: Usuário Convidado
   content: Concordo com o Post
   post_id: 1
+
+alternative:
+  id: 2
+  name: Usuário alternativo
+  content: Discordo do Post de discussão
+  post_id: 2

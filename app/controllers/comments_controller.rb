@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CommentsController < CollectionsController
-
   skip_before_action :authenticate_user!
 
   private
