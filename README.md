@@ -1,24 +1,20 @@
-# README
+# Desafio Técnico - ISG Participações
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Detalhes Técnicos
 
-Things you may want to cover:
+* Ruby 3.2.2
+* Ruby on Rails 7.0.8
+* PostgreSQL 15.4  
 
-* Ruby version
+## Informações sobre o seed
 
-* System dependencies
+O seed da API acompanha um usuário de teste
+Login: admin@teste.com
+Senha: admin123
 
-* Configuration
+## Instalação
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle
+rails db:setup
+```
