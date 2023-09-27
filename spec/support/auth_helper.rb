@@ -5,7 +5,6 @@ module AuthHelper
     post user_session_path(format: :json), params: {
       user: { email:, password: }
     }.to_json, headers: { 'Content-Type': 'application/json' }
-
   end
 
   def http_logout(token)

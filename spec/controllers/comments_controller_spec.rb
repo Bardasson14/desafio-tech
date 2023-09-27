@@ -19,7 +19,7 @@ RSpec.describe CommentsController, type: :request do
       it 'should return all comments' do
         get comments_path(page: 1, per_page: 10, format: :json)
         serialized_comments = ActiveModelSerializers::SerializableResource.new(Comment.all,
-                                                                            each_serializer: CommentSerializer).to_json
+                                                                               each_serializer: CommentSerializer).to_json
         expect(response.body).to eq(serialized_comments)
       end
     end
@@ -28,7 +28,7 @@ RSpec.describe CommentsController, type: :request do
       it 'should return Comment(id=1)' do
         get comment_path(@default_comment, format: :json)
         serialized_comment = ActiveModelSerializers::SerializableResource.new(@default_comment,
-                                                                           each_serializer: CommentSerializer).to_json
+                                                                              each_serializer: CommentSerializer).to_json
         expect(response.body).to eq(serialized_comment)
       end
     end
@@ -62,7 +62,7 @@ RSpec.describe CommentsController, type: :request do
         end
       end
     end
-    
+
     describe '#update' do
       context 'valid Comment' do
         it 'should be updated' do
@@ -112,7 +112,7 @@ RSpec.describe CommentsController, type: :request do
       it 'should return all comments' do
         get comments_path(format: :json)
         serialized_comments = ActiveModelSerializers::SerializableResource.new(Comment.all,
-                                                                            each_serializer: CommentSerializer).to_json
+                                                                               each_serializer: CommentSerializer).to_json
         expect(response.body).to eq(serialized_comments)
       end
     end
@@ -121,7 +121,7 @@ RSpec.describe CommentsController, type: :request do
       it 'should return Comment(id=1)' do
         get comment_path(@default_comment, format: :json)
         serialized_comment = ActiveModelSerializers::SerializableResource.new(@default_comment,
-                                                                           each_serializer: CommentSerializer).to_json
+                                                                              each_serializer: CommentSerializer).to_json
         expect(response.body).to eq(serialized_comment)
       end
     end
@@ -131,7 +131,7 @@ RSpec.describe CommentsController, type: :request do
         it 'should not be persisted' do
           comment_params = {
             comment: {
-              content: 'Novo Comentário',
+              content: 'Novo Comentário'
             }
           }
 
@@ -144,7 +144,7 @@ RSpec.describe CommentsController, type: :request do
     describe '#update' do
       context 'existing Comment' do
         it 'should not be updated' do
-          original_content = @default_comment.content 
+          original_content = @default_comment.content
           comment_params = { comment: { content: "Comentário atualizado #{Date.today}" } }
 
           patch comment_path(@default_comment, format: :json), params: comment_params

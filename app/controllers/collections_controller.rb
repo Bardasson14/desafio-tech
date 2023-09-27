@@ -10,7 +10,7 @@ class CollectionsController < ApplicationController
     if params[:page].present? && params[:per_page].present?
       resources = resources.paginate(page: params[:page], per_page: params[:per_page])
     end
-    
+
     render json: resources, each_serializer: resource_serializer
   end
 

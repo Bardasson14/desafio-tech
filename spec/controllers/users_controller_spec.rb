@@ -132,7 +132,7 @@ RSpec.describe UsersController, type: :request do
           }
 
           post users_path(format: :json), params: user_params
-          
+
           expect(response.code).to eq '401'
         end
       end
