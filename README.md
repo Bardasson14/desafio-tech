@@ -18,3 +18,7 @@ O seed da API acompanha um usuário de teste
 bundle
 rails db:setup
 ```
+
+## Documentação da API
+
+O repositório possui um arquivo .json compatível com Postman, contendo testes, exemplos e documentação para todas as rotas implementadas.
