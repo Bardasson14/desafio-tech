@@ -1,0 +1,11 @@
+name: RSpec Testing Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Test DB
+        run: rails db:create db:migrate RAILS_ENV=test
+      - name: Test
+        run: docker-compose run web rails t
