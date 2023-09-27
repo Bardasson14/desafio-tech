@@ -15,12 +15,22 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/comments",
+							"raw": "{{BASE_URL}}/comments?page=1&per_page=10",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"comments"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
 							]
 						}
 					},
@@ -287,12 +297,22 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/posts",
+							"raw": "{{BASE_URL}}/posts?page=1&per_page=10",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
 							]
 						}
 					},
@@ -569,12 +589,22 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/users",
+							"raw": "{{BASE_URL}}/users?page=1&per_page=10",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
 							]
 						}
 					},
@@ -765,7 +795,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test1@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
+							"raw": "{\n    \"user\": {\n        \"name\": \"New User\",\n        \"email\": \"test21@user.com\",\n        \"password\": \"password123\",\n        \"password_confirmation\": \"password123\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -972,13 +1002,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/users/4",
+							"raw": "{{BASE_URL}}/users/6",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"users",
-								"4"
+								"6"
 							]
 						}
 					},
