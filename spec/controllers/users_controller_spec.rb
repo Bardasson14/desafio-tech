@@ -13,7 +13,7 @@ RSpec.describe UsersController, type: :request do
 
     describe '#index' do
       it 'should return all users' do
-        get users_path(format: :json)
+        get users_path(page: 1, per_page: 100, format: :json)
         serialized_users = ActiveModelSerializers::SerializableResource.new(User.all,
                                                                             each_serializer: UserSerializer).to_json
         expect(response.body).to eq(serialized_users)

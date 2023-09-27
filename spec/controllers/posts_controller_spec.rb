@@ -16,7 +16,7 @@ RSpec.describe PostsController, type: :request do
 
     describe '#index' do
       it 'should return all posts' do
-        get posts_path(format: :json)
+        get posts_path(page: 1, per_page: 100, format: :json)
         serialized_posts = ActiveModelSerializers::SerializableResource.new(Post.all,
                                                                             each_serializer: PostSerializer).to_json
         expect(response.body).to eq(serialized_posts)
